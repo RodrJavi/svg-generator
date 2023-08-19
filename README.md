@@ -18,4 +18,4 @@ Download repo then run 'npm install' from root folder.
 
 Run index.js from root folder and answer prompts that appear in the terminal until an svg is generated.
 
-[Walkthrough video link](https://drive.google.com/file/d/1G234u6ert39RFz4WloUYcI-SL2jLlQ2l/view)
+[Walkthrough video link](https://drive.google.com/file/d/1kkQR2wlwhO0PKez_vmzg7rSsz_FMr-yq/view)
