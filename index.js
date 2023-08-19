@@ -66,13 +66,11 @@ inquirer
         );
         break;
     }
-    // console.log(generateSVG(chosenShape.render(), chosenShape.textRender()));
     console.log(chosenShape.render());
     console.log(chosenShape.textRender());
     const shape = chosenShape.render();
     const text = chosenShape.textRender();
     const completedSvg = generateSVG(shape, text);
-    // console.log(completedSvg);
     fs.writeFile("examplesvg.svg", completedSvg, (err) => {
       err ? console.log(err) : console.log("successfully created svg!");
     });
