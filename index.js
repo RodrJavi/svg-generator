@@ -3,7 +3,7 @@ const fs = require("fs");
 const { Triangle, Circle, Square } = require("./lib/shapes");
 
 const generateSVG = (shape, text) =>
-  `<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  `<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
     ${shape}
 
     ${text}
@@ -65,7 +65,7 @@ inquirer
     const shape = chosenShape.render();
     const text = chosenShape.textRender();
     const completedSvg = generateSVG(shape, text);
-    fs.writeFile("generated-svg.svg", completedSvg, (err) => {
-      err ? console.log(err) : console.log("successfully created svg!");
+    fs.writeFile("logo.svg", completedSvg, (err) => {
+      err ? console.log(err) : console.log("Generated logo.svg");
     });
   });
