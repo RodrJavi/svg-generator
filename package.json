@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/RodrJavi/svg-generator#readme",
   "dependencies": {
-    "inquirer": "^9.2.10",
+    "inquirer": "^8.2.4",
     "jest": "^29.6.2"
   }
 }
