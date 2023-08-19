@@ -38,11 +38,9 @@ inquirer
     },
   ])
   .then((answers) => {
-    console.log(answers);
     let chosenShape;
     switch (answers.shape) {
       case "circle":
-        console.log("circle!");
         chosenShape = new Circle(
           answers.text,
           answers.textColor,
@@ -50,7 +48,6 @@ inquirer
         );
         break;
       case "square":
-        console.log("square!");
         chosenShape = new Square(
           answers.text,
           answers.textColor,
@@ -58,7 +55,6 @@ inquirer
         );
         break;
       case "triangle":
-        console.log("triangle!");
         chosenShape = new Triangle(
           answers.text,
           answers.textColor,
@@ -66,12 +62,10 @@ inquirer
         );
         break;
     }
-    console.log(chosenShape.render());
-    console.log(chosenShape.textRender());
     const shape = chosenShape.render();
     const text = chosenShape.textRender();
     const completedSvg = generateSVG(shape, text);
-    fs.writeFile("examplesvg.svg", completedSvg, (err) => {
+    fs.writeFile("generated-svg.svg", completedSvg, (err) => {
       err ? console.log(err) : console.log("successfully created svg!");
     });
   });
